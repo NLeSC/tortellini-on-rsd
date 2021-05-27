@@ -1,0 +1,13 @@
+name: publish
+on:
+  workflow_dispatch:
+    # for manual trigger
+
+jobs:
+  tortellini:
+    runs-on: ubuntu-latest
+    steps:
+
+    - run: curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' > urls.txt
+
+    - uses: tortellini-tools/action@main
