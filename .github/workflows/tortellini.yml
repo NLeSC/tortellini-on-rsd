@@ -12,4 +12,4 @@ jobs:
 
     - uses: tortellini-tools/action@main
       with:
-        - repositories: urls.txt
+        repositories: urls.txt
