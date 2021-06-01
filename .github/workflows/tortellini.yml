@@ -7,11 +7,11 @@ jobs:
   tortellini:
     runs-on: ubuntu-latest
     steps:
+      - run: curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' > urls.txt
 
-    - run: curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' > urls.txt
+      - uses: tortellini-tools/action@main
+        with:
+          repositories: 'urls.txt'
 
-    - uses: tortellini-tools/action@main
-      with:
-        repositories: urls.txt
-        
-    - run: tree -L 3
+      - run: |
+          tree -L 4 ./
