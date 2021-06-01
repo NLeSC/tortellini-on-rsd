@@ -9,7 +9,7 @@ jobs:
     steps:
       - run: curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' > urls.txt
 
-      - uses: tortellini-tools/action@main
+      - uses: tortellini-tools/action@fd7e681cc1d5e02f7246d579bd70f68933338e33
         with:
           repositories: 'urls.txt'
 
