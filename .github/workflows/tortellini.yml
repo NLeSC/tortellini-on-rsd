@@ -10,7 +10,7 @@ jobs:
 
     - run: |
         curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' --raw-output > urls-all.txt
-        cat urls-all.txt | tail -n 10 > urls.txt
+        cat urls-all.txt | tail -n 2 > urls.txt
 
     - uses: tortellini-tools/action@main
       with:
