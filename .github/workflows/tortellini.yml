@@ -8,13 +8,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - run: curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' --raw-output > urls.txt
+    - run: |
+        curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' --raw-output > urls-all.txt
+        cat urls-all.txt | tail -n 2 > urls.txt
 
     - uses: tortellini-tools/action@main
       with:
         repositories: urls.txt
         
     - run: tree -L 3
+    
+    - run: rm -rf .tortellini/in/*
     
     - uses: jakejarvis/s3-sync-action@master
       with:
