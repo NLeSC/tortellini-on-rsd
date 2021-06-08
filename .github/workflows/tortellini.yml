@@ -8,16 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-    - run: curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' --raw-output > urls.txt
+    - run: |
+        curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' --raw-output > urls-all.txt
+        cat urls-all.txt | tail -n 2 > urls.txt
+        
+    - run: mkdir .tortellini
 
-    - uses: tortellini-tools/action@main
+    - uses: tortellini-tools/action@36-vue-app
       with:
         repositories: urls.txt
         
     - run: tree -L 3
     
     - run: sudo rm -rf .tortellini/in/*
-    
+
     - uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete
