@@ -12,7 +12,6 @@ jobs:
         curl https://research-software.nl/api/software_cache | jq '.[] | .repositoryURLs.github[]' --raw-output > urls-all.txt
         cat urls-all.txt | tail -n 2 > urls.txt
         
-    - run: mkdir .tortellini
 
     - uses: tortellini-tools/action@36-vue-app
       with:
