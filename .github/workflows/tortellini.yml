@@ -19,7 +19,6 @@ jobs:
         
     - run: tree -L 3
     
-    - run: sudo rm -rf .tortellini/in/*
 
     - uses: jakejarvis/s3-sync-action@master
       with:
