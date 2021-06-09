@@ -13,7 +13,7 @@ jobs:
         cat urls-all.txt | tail -n 2 > urls.txt
         
 
-    - uses: tortellini-tools/action@36-vue-app
+    - uses: tortellini-tools/action@main
       with:
         repositories: urls.txt
         
