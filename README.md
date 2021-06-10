@@ -8,7 +8,7 @@ The result of the analysis can be inspected here: <https://tortellini.research-s
 This repository also holds the configuration files [classifications.yml](classifications.yml) and [rules.kts](rules.kts)
 used to evaluate licenses of dependencies using [ort](https://github.com/oss-review-toolkit/ort).
 The configuration files included here originate from <https://github.com/oss-review-toolkit/ort/tree/master/examples>
-and were slightly modified to fit the Netherlands eScience Center.
+and were slightly modified to fit the Netherlands eScience Center requirements.
 
 Uses https://github.com/marketplace/actions/tortellini-action
 
