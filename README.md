@@ -4,7 +4,7 @@ Home of the workflow that creates an overview of any license problem we may have
 of the repositories in the Research Software Directory (<https://research-software.nl>).
 
 The workflow runs https://github.com/marketplace/actions/tortellini-action at weekly
-intervals to produce the overview at <https://tortellini.research-software.nl>.
+intervals to produce the overview at <https://tortellini.research-software.nl/index.html>.
 
 This repository also holds the configuration files [classifications.yml](classifications.yml) and [rules.kts](rules.kts)
 used to evaluate licenses of dependencies using [ort](https://github.com/oss-review-toolkit/ort).
