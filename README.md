@@ -5,7 +5,7 @@ of the repositories in the Research Software Directory (<https://research-softwa
 
 The result of the analysis can be inspected here: <https://tortellini.research-software.nl>.
 
-This repository also holds the configuration files <classifications.yml> and <rules.yml>
+This repository also holds the configuration files [classifications.yml](classifications.yml) and [rules.yml](rules.yml)
 used to evaluate licenses of dependencies using [ort](https://github.com/oss-review-toolkit/ort).
 The configuration files included here originate from <https://github.com/oss-review-toolkit/ort/tree/master/examples>
 and were slightly modified to fit the Netherlands eScience Center.
