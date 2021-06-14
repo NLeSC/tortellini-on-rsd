@@ -205,6 +205,10 @@ categorizations:
   - "copyleft"
   - "include-in-notice-file"
   - "include-source-code-offer-in-notice-file"
+- id: "ISC"
+  categories:
+  - "permissive"
+  - "include-in-notice-file"  
 - id: "JSON"
   categories:
   - "permissive"
